@@ -1,0 +1,156 @@
+/* ==========================================
+   BAIS 3300 – External Stylesheet
+   Habib Saine & Sumika Thapa
+   ========================================== */
+
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Base ── */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+  color: #2c2c2c;
+  line-height: 1.7;
+}
+
+/* ── Header ── */
+.site-header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header .logo {
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  color: #f0a500;
+  text-decoration: none;
+}
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.site-nav a:hover { color: #f0a500; }
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #000 0%, #1a3c5e 100%);
+  color: #fff;
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+}
+.hero h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+.hero p { font-size: 1.05rem; opacity: 0.85; color: #fff; }
+
+/* ── RUBRIC: .container (Flexbox two-column) ── */
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ── RUBRIC: .student-box ── */
+.student-box {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  min-width: 280px;
+}
+.student-box h2 {
+  font-family: 'Merriweather', serif;
+  color: #000;
+  font-size: 1.4rem;
+  border-bottom: 3px solid #f0a500;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.9rem;
+  display: inline-block;
+}
+.student-box p  { color: #555; margin-bottom: 1rem; }
+.student-box ul { padding-left: 1.25rem; color: #555; margin-bottom: 1.25rem; }
+.student-box ul li { margin-bottom: 0.3rem; }
+.student-box img {
+  display: block;
+  width: 200px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ── RUBRIC: table ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+/* ── RUBRIC: th, td ── */
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* ── RUBRIC: th ── */
+th {
+  background-color: #000;
+  color: #fff;
+}
+
+tr:nth-child(even) { background-color: #f2f2f2; }
+
+/* ── Table section wrapper ── */
+.table-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+.table-wrapper h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+  border-bottom: 3px solid #f0a500;
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+.table-section { margin-bottom: 3rem; }
+
+/* ── Footer ── */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid #ddd;
+}
+.site-footer a { color: #1a3c5e; font-weight: 600; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .container { flex-direction: column; }
+  .hero h1 { font-size: 1.8rem; }
+  .site-header { flex-direction: column; gap: 0.5rem; }
+}
